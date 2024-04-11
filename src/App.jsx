@@ -29,8 +29,8 @@ const App = () => {
         <button onClick={handleAddTask}>Añadir tarea</button>
         <ul>
           {tasks.map(task => (
-            <li key={task.id}>
-              {task.name}
+            <li className='task-component' key={task.id}>
+              <p>{task.name}</p>
               <button onClick={() => handleDeleteTask(task.id)}>Eliminar</button>
             </li>
           ))}
